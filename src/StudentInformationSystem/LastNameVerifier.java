@@ -1,0 +1,26 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package StudentInformationSystem;
+
+import javax.swing.*;
+
+/**
+ *
+ * @author Dell
+ */
+public class LastNameVerifier extends InputVerifier{
+     public boolean verify(JComponent input)
+    {
+    JTextField jtf= (JTextField)input;
+    if(jtf.getText().matches("[a-zA-Z]+([ '-][a-zA-Z]+)*"))
+        return true;
+    else
+    {
+        JOptionPane.showMessageDialog(input,"Kindly input last name properly. For eg; pant","Invalid Input",JOptionPane.ERROR_MESSAGE);
+        return false;
+    }
+    }
+}
